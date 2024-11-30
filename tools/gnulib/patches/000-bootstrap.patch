@@ -1,7 +1,16 @@
---- a/bootstrap
-+++ b/bootstrap
-@@ -244,7 +244,7 @@ check_exists() {
-       ($2 --version </dev/null)
+--- a/build-aux/bootstrap
++++ b/build-aux/bootstrap
+@@ -237,14 +237,14 @@ test -r "$conffile" && . "$conffile"
+ 
+ check_exists() {
+   if test "$1" = "--verbose"; then
+-    ($2 --version </dev/null) >/dev/null 2>&1
++    ($2 $3 $4 --version </dev/null) >/dev/null 2>&1
+     if test $? -ge 126; then
+       # If not found, run with diagnostics as one may be
+       # presented with env variables to set to find the right version
+-      ($2 --version </dev/null)
++      ($2 $3 $4 --version </dev/null)
      fi
    else
 -    ($1 --version </dev/null) >/dev/null 2>&1
