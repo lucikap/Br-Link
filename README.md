@@ -1,4 +1,4 @@
-# foke自lede的一个分支，将用于打造Br-link
+# fork自lede的一个分支，将用于打造Br-link
 
 ## 注意
 
