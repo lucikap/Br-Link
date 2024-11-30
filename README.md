@@ -128,7 +128,7 @@ PS > git clone https://github.com/coolsnowwolf/lede <your_local_lede_path>
 
    ```bash
    brew unlink awk
-   brew install coreutils diffutils findutils gawk gnu-getopt gnu-tar grep make ncurses pkg-config wget quilt xz
+   brew install coreutils diffutils findutils gawk gnu-getopt gnu-tar grep make ncurses pkg-config python texinfo wget quilt xz
    brew install gcc@11
    ```
 
@@ -158,7 +158,7 @@ PS > git clone https://github.com/coolsnowwolf/lede <your_local_lede_path>
    echo 'export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"' >> ~/.bashrc
    ```
 
-5. 重新加载一下 shell 启动文件 `source ~/.bashrc`，然后输入 `bash` 进入 bash shell，就可以和 Linux 一样正常编译了
+5. 重新加载一下 shell 启动文件 `source ~/.bashrc`，然后输入 `bash` 进入 bash shell，然后输入 ulimit -n 10240 ，就可以和 Linux 一样正常编译了
 
 ## 特别提示
 
